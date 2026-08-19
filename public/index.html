@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Offline-First Demo</title>
+    <style>
+      body { font-family: system-ui, -apple-system, sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+      form { margin-bottom: 1rem; }
+      input { padding: 0.5rem; width: 70%; margin-right: 0.5rem; }
+      button { padding: 0.5rem 0.75rem; }
+      li.synced { color: gray; }
+    </style>
+  </head>
+  <body>
+    <h1>Offline-First Items</h1>
+    <form id="itemForm">
+      <input id="title" placeholder="Item title" required />
+      <button type="submit">Add</button>
+    </form>
+    <div>
+      <strong>Status:</strong> <span id="status">unknown</span>
+      &nbsp;|&nbsp;
+      <button id="pullBtn">Pull server items</button>
+    </div>
+    <ul id="items"></ul>
+
+    <!-- app modules -->
+    <script type="module" src="/src/app.js"></script>
+  </body>
+</html>
